@@ -1,7 +1,10 @@
 <template>
 <!-- html -->
     <div class="person">
-        
+        <h1>China</h1>
+        <h2 ref="title2">Beijing</h2>
+        <h3>Gugong</h3>
+        <button @click="showLog">输出h2这个元素</button>
     </div>
 </template>
 
@@ -16,16 +19,21 @@
     import {ref, watch, watchEffect, defineExpose} from 'vue'
     import {reactive,toRefs,toRef} from 'vue'
 
-    import { type PersonInter } from '@/types'
+    //创建一个title2，用于存储ref标记的内容
+    let title2 = ref()
+    
+    //要传给父组件的内容
+    //let name = ref('张三')
+    //let age = ref(18)
 
-    let person:PersonInter = {id:'a01',name:'张三',age:18}
 
-    let personList:Array<PersonInter> = [
-        {id:'a01',name:'张三',age:18},
-        {id:'a02',name:'李四',age:18},
-        {id:'a03',name:'王五',age:18},
-        
-    ]
+    function showLog(){
+        console.log(title2.value)
+    }
+    
+
+    //使用defineExpose将组件中的数据交给外部
+    //defineExpose({name,age})
     
 </script>
 
