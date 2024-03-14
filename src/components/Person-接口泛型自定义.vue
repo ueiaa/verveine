@@ -1,12 +1,7 @@
 <template>
 <!-- html -->
     <div class="person">
-        <h2>当前求和为：{{ sum }}</h2>
-        <button @click="add">点击sum+1</button>
-        <hr>
-        <img v-for="(dog,index) in dogList" :src="dog" :key="index">
-        <br>
-        <button @click="getDog">dog+1</button>
+        
     </div>
 </template>
 
@@ -21,11 +16,17 @@
     import {ref, watch, watchEffect, defineExpose} from 'vue'
     import {reactive,toRefs,toRef} from 'vue'
 
-    import useSum from '@/hooks/useSum';
-    import useDog from '@/hooks/useDog';
+    // import { type PersonInter } from '@/types'
 
-    const {sum,add} = useSum()
-    const {dogList,getDog} = useDog()
+    // let person:PersonInter = {id:'a01',name:'张三',age:18}
+
+    // let personList:Array<PersonInter> = [
+    //     {id:'a01',name:'张三',age:18},
+    //     {id:'a02',name:'李四',age:18},
+    //     {id:'a03',name:'王五',age:18},
+        
+    // ]
+    
 </script>
 
 <style scoped>
@@ -39,9 +40,5 @@
 button{
     border-radius: 10px;
     size: 50px 30px;
-}
-img{
-    height: 100px;
-    margin-right: 10px;
 }
 </style>

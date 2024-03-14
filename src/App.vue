@@ -3,13 +3,13 @@
     <Person/>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup name="App">
 // JS或TS
+    import { ref, reactive } from 'vue';
     import Person from './components/Person.vue'
-    export default{
-        name:'App',
-        components:{Person}
-    }
+
+    
+    
 </script>
 
 <style>
