@@ -15,5 +15,6 @@ const pinia = createPinia()
 app.use(router)
 //安装pinia
 app.use(pinia)
+
 //挂载整个应用到app容器中
 app.mount('#app')
