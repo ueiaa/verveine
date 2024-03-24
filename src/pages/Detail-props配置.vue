@@ -7,6 +7,7 @@
 </template>
 
 <script setup lang="ts" name="About">
+    //声明接收props
     defineProps(['id','title','content'])
 </script>
 
