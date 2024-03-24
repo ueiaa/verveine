@@ -8,6 +8,34 @@
         <svg width="100" height="100">
             <circle cx="100" cy="50" stroke="red" stroke-width="5" fill="black"/>
         </svg>
+
+        <br>
+        <input type="email" name="email"/><br>
+        <input type="url" name="url"/><br>
+        <input type="tel" name="tel"/><br>
+        <input type="number" name="number" min="2" max="5" step="1" value="2"/><br>
+        <input type="range" name="range" min="20" max="200" value="50"/><br>
+        <input type="date" name="date"/><br>
+        <input type="week" name="week"/><br>
+        <input type="time" name="time"/><br>
+        <input type="datetime-local" name="datetime-local"/><br>
+        <input type="color" name="color"/>
+
+        <form action="" method="get" autocomplete="on">
+            姓名：<input type="text" name="name" pattern="[A-z0-9]{8}"/><br>
+            密码：<input type="password" name="pwd" /><br>
+            <input type="submit" formnovalidate="true" value="提交未经验证">
+        </form>
+
+        <div class="Text">
+            <span>我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，
+                我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，
+                我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，
+            </span>
+        </div>
+        <div class="Text"><span>我是单行文字</span></div>
+
+        <div class="section"></div>
     </div>
 </template>
 
@@ -57,5 +85,17 @@
     border: 1px solid black;
     font-size: 20px;
     font-weight: 100;
+}
+.section{
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: #333;
+}
+.Text{
+    text-align: center;
+    span{
+        display: inline-block;
+        text-align: left;
+    }
 }
 </style>

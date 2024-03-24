@@ -2,7 +2,7 @@
     <div class="talk">
         <button @click="getTalk">获取一句土味情话</button>
         <ul>
-            <li v-for="talk in talkStore.talkList" :key="talk.id">{{ talk.title }}</li>
+            <li v-for="talk in talkList" :key="talk.id">{{ talk.title }}</li>
         </ul>
     </div>
 </template>
@@ -11,26 +11,23 @@
     import {reactive} from 'vue';
     import axios from 'axios';
     import {nanoid} from 'nanoid';
-    import { useTalkStore } from '@/store/loveTalk'
-    import { storeToRefs } from 'pinia';
 
-    const talkStore = useTalkStore()
-    const talkList = storeToRefs(talkStore)
-
-    talkStore.$subscribe((mutate,state)=>{
-        console.log('@@')
-        localStorage.setItem('talkList',JSON.stringify(state.talkList))
-        //JSON.stringify()将js对象转换为字符串
-    })
     
-    /* let talkList = reactive([
+    let talkList = reactive([
         {id:'akhdaui01',title:'ttttt01'},
         {id:'akhdaui02',title:'ttttt02'},
         {id:'akhdaui03',title:'ttttt03'}
-    ]) */
+    ])
 
-    function getTalk(){
-        talkStore.getATalk()
+    async function getTalk(){
+        //发请求
+        //let result = await axios.get('https://api.uomg.com/api/rand.qinghua?format=json')
+        //连续解构赋值+重命名写法
+        let {data:{content:title}} = await axios.get('https://api.uomg.com/api/rand.qinghua?format=json')
+        //把请求回来的字符串包装成一个对象
+        let obj = {id:nanoid(),title}
+        console.log(obj)
+        talkList.unshift(obj)
     }
 </script>
 
