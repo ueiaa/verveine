@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <img src="http://www.atguigu.com/images/index_new/logo.png" alt="">
+        <!-- <img src="http://www.atguigu.com/images/index_new/logo.png" alt=""> -->
     </div>
 </template>
 

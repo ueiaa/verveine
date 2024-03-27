@@ -6,6 +6,8 @@ import router from './router'
 
 import {createPinia} from 'pinia'
 
+import emitter from './utils/emitter' 
+
 //创建应用
 const app = createApp(App)
 //创建pinia

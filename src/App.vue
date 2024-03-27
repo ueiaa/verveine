@@ -17,17 +17,16 @@
                     <router-view></router-view>
                 </div>
             </div>
+            <div class="line"></div>
+            
         </div>
     </div>
 </template>
 
 <script lang="ts" setup name="App">
-    import Count from './components/Count.vue';
-    import LoveTalk from './components/LoveTalk.vue';
     import Canvas from './components/Canvas.vue'
 </script>
 
 <style>
-
 
 </style>
