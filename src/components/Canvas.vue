@@ -27,6 +27,7 @@
             <input type="submit" formnovalidate="true" value="提交未经验证">
         </form>
 
+        <!-- 实现多行文字居左，一行水平居中 -->
         <div class="Text">
             <span>我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，
                 我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，我是多行文字，
@@ -35,6 +36,7 @@
         </div>
         <div class="Text"><span>我是单行文字</span></div>
 
+        <!-- 实现一个最大的正方形 -->
         <div class="section"></div>
     </div>
 </template>

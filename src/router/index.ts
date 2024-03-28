@@ -94,6 +94,22 @@ const router = createRouter({
             component:AttrsListeners
         },
         {
+            path:'/ref-parent',
+            component:RefchildrenParent
+        },
+        {
+            path:'/provide-inject',
+            component:ProvideInject
+        },
+        {
+            path:'/pinia',
+            component:Pinia
+        },
+        {
+            path:'/slot',
+            component:Slot
+        },
+        {
             path:'/props',
             component:Props
         },
